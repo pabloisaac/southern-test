@@ -29,7 +29,7 @@ function Search() {
       query: state.query,
     };
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    dispatch(setListPhotos(_.chunk(response.data.photos, 5)));
+    dispatch(setListPhotos(_.chunk(response.data.photos, 3)));
     dispatch(setLoading(false));
   };
 
