@@ -23,6 +23,7 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'double'],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    'max-len': ["error", { "code": 200 }]
   },
 };

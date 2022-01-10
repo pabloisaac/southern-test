@@ -7,6 +7,7 @@ import {
 import "./index.css";
 import LazyImage from "./LazyImage";
 import Loading from "../Loading/Loading";
+import PhotoEmpty from "./PhotoEmpty";
 
 function PhotoViewer() {
   const { state, dispatch } = useContext(AppContext);
@@ -37,6 +38,7 @@ function PhotoViewer() {
 
   return (
     <div className="box-color border-grid">
+      {state.handle_search && <PhotoEmpty />}
       {!state.loading ? listPhotos() : <Loading />}
     </div>
   );

@@ -16,6 +16,7 @@ export const initialState = {
     earth_date: null,
   },
   loading: false,
+  handle_search: false,
 };
 
 export const reducer = (state = {}, action = {}) => {
@@ -47,6 +48,10 @@ export const reducer = (state = {}, action = {}) => {
 
     case actionTypes.SET_LOADING:
       response = { ...state, loading: action.data };
+      return response;
+
+    case actionTypes.SET_HANDLE_SEARCH:
+      response = { ...state, handle_search: action.data };
       return response;
 
     default:

@@ -6,9 +6,9 @@ import _ from "lodash";
 import moment from "moment";
 import GetRoverByQuery from "../../services/ApiNasa";
 import {
-  setListPhotos, setRoverType, setCameraType, setEarthDate, setSolDate, setLoading,
+  setListPhotos, setRoverType, setCameraType, setEarthDate, setSolDate, setLoading, setHandleSearch, setQuery,
 } from "../../store/actions";
-import { AppContext } from "../../store/reducer";
+import { initialState, AppContext } from "../../store/reducer";
 
 function Search() {
   const { state, dispatch } = useContext(AppContext);
@@ -16,6 +16,11 @@ function Search() {
   const getApiNasa = async () => {
     dispatch(setLoading(true));
     const response = await GetRoverByQuery(state.query);
+    if (response.data.photos.length === 0) {
+      dispatch(setHandleSearch(true));
+    } else {
+      dispatch(setHandleSearch(false));
+    }
     const bookmarks = {
       rover_type: state.rover_type,
       camera_type: state.camera_type,
@@ -35,6 +40,8 @@ function Search() {
     dispatch(setEarthDate(moment().format("YYYY-MM-DD")));
     dispatch(setSolDate(0));
     dispatch(setListPhotos([]));
+    dispatch(setQuery(initialState.query));
+    dispatch(setHandleSearch(false));
   };
 
   return (
@@ -49,13 +56,13 @@ function Search() {
       </Button>
       {localStorage.getItem("bookmarks")
         && (
-        <Button
-          variant="contained"
-          onClick={deleteBookmarks}
-          startIcon={<DeleteIcon />}
-        >
-          Delete
-        </Button>
+          <Button
+            variant="contained"
+            onClick={deleteBookmarks}
+            startIcon={<DeleteIcon />}
+          >
+            Delete Bookmarks
+          </Button>
         )}
     </>
   );

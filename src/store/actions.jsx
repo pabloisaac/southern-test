@@ -6,6 +6,7 @@ export const actionTypes = {
   SET_SOL_DATE: "SET_SOL_DATE",
   SET_QUERY: "SET_QUERY",
   SET_LOADING: "SET_LOADING",
+  SET_HANDLE_SEARCH: "SET_HANDLE_SEARCH",
 };
 export const setListPhotos = (data) => ({
   type: actionTypes.SET_LIST_PHOTOS,
@@ -39,5 +40,10 @@ export const setQuery = (data) => ({
 
 export const setLoading = (data) => ({
   type: actionTypes.SET_LOADING,
+  data,
+});
+
+export const setHandleSearch = (data) => ({
+  type: actionTypes.SET_HANDLE_SEARCH,
   data,
 });
