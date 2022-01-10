@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/southern-test/static/css/main.eb0a9908.css",
+    "main.js": "/southern-test/static/js/main.68fdf940.js",
+    "static/media/favicon-192.png": "/southern-test/static/media/favicon-192.b5bf6358aadcea680b90.png",
+    "index.html": "/southern-test/index.html",
+    "main.eb0a9908.css.map": "/southern-test/static/css/main.eb0a9908.css.map",
+    "main.68fdf940.js.map": "/southern-test/static/js/main.68fdf940.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb0a9908.css",
+    "static/js/main.68fdf940.js"
+  ]
+}
