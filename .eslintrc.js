@@ -21,6 +21,7 @@ module.exports = {
   ],
   rules: {
     semi: ['error', 'always'],
+    quotes: ['error', 'double'],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
     "react/jsx-props-no-spreading": "off"
   },
