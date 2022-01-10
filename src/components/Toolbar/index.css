@@ -1,0 +1,29 @@
+.tool-color{
+    background-color: #efefef;
+}
+
+.box-container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.grid-btn{
+    display: grid;
+    padding: 16px;
+    grid-gap: 16px;
+}
+
+.grid-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.div-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}

@@ -1,0 +1,49 @@
+.grid-style{
+    display: grid;
+    padding: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+
+.img-wrapper-style{
+    position: relative;
+    width: 100%;
+    height: 28vw;
+}
+
+.box-color{
+  background-color: #FFFFFF;
+}
+
+.border-grid{
+  border-top: solid #1876D1;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        background-color: #fff;
+      }
+      50% {
+        background-color: #ccc;
+      }
+      100% {
+        background-color: #fff;
+      }
+}
+
+.placeholder-style{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    animation: loadingAnimation 1s infinite;
+}
+
+.img-style {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
